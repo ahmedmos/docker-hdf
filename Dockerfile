@@ -8,4 +8,5 @@ VOLUME     /opt/datafiles \
            /opt/certfiles
 WORKDIR    ${HDF_HOME}
 RUN        chmod +x ./start_hdf.sh
+RUN        apk add --update bash && rm -rf /var/cache/apk/*
 CMD        ./start_hdf.sh
